@@ -11,7 +11,14 @@
 		782D78CA29D3314000F754CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D78C929D3314000F754CE /* ContentView.swift */; };
 		782D78CC29D3314100F754CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782D78CB29D3314100F754CE /* Assets.xcassets */; };
 		782D78D029D3314100F754CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782D78CF29D3314100F754CE /* Preview Assets.xcassets */; };
-		783D683D29D33F2D003A2EDC /* TextToSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D683C29D33F2D003A2EDC /* TextToSpeechService.swift */; };
+		7834D2F829D34291007AE58C /* TextToSpeech+SpeechDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D2F729D34291007AE58C /* TextToSpeech+SpeechDelegate.swift */; };
+		7834D2FA29D35990007AE58C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D2F929D35990007AE58C /* ContentViewModel.swift */; };
+		7834D2FC29D364D6007AE58C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D2FB29D364D6007AE58C /* Player.swift */; };
+		7834D2FE29D368F3007AE58C /* TextToSpeech+Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D2FD29D368F3007AE58C /* TextToSpeech+Controls.swift */; };
+		7834D30229D36A79007AE58C /* Flashcards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D30129D36A79007AE58C /* Flashcards.swift */; };
+		7834D30529D36AC1007AE58C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D30429D36AC1007AE58C /* Store.swift */; };
+		7834D30829D3768A007AE58C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7834D30729D3768A007AE58C /* Color+Extension.swift */; };
+		783D683D29D33F2D003A2EDC /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D683C29D33F2D003A2EDC /* TextToSpeech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +28,14 @@
 		782D78CB29D3314100F754CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		782D78CD29D3314100F754CE /* FlashcardZen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlashcardZen.entitlements; sourceTree = "<group>"; };
 		782D78CF29D3314100F754CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		783D683C29D33F2D003A2EDC /* TextToSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechService.swift; sourceTree = "<group>"; };
+		7834D2F729D34291007AE58C /* TextToSpeech+SpeechDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextToSpeech+SpeechDelegate.swift"; sourceTree = "<group>"; };
+		7834D2F929D35990007AE58C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		7834D2FB29D364D6007AE58C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7834D2FD29D368F3007AE58C /* TextToSpeech+Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextToSpeech+Controls.swift"; sourceTree = "<group>"; };
+		7834D30129D36A79007AE58C /* Flashcards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcards.swift; sourceTree = "<group>"; };
+		7834D30429D36AC1007AE58C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7834D30729D3768A007AE58C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		783D683C29D33F2D003A2EDC /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +68,14 @@
 		782D78C629D3314000F754CE /* FlashcardZen */ = {
 			isa = PBXGroup;
 			children = (
+				7834D30629D37670007AE58C /* Helpers */,
+				7834D30329D36AAC007AE58C /* Data */,
+				7834D30029D36A6D007AE58C /* Models */,
 				782D78D829D3335E00F754CE /* Services */,
 				782D78D729D3335400F754CE /* ViewModels */,
 				782D78D629D3334E00F754CE /* Views */,
 				782D78C729D3314000F754CE /* FlashcardZenApp.swift */,
+				7834D2F929D35990007AE58C /* ContentViewModel.swift */,
 				782D78C929D3314000F754CE /* ContentView.swift */,
 				782D78CB29D3314100F754CE /* Assets.xcassets */,
 				782D78CD29D3314100F754CE /* FlashcardZen.entitlements */,
@@ -91,9 +109,44 @@
 		782D78D829D3335E00F754CE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				783D683C29D33F2D003A2EDC /* TextToSpeechService.swift */,
+				7834D2FF29D368F9007AE58C /* TextToSpeech */,
+				7834D2FB29D364D6007AE58C /* Player.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7834D2FF29D368F9007AE58C /* TextToSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				783D683C29D33F2D003A2EDC /* TextToSpeech.swift */,
+				7834D2F729D34291007AE58C /* TextToSpeech+SpeechDelegate.swift */,
+				7834D2FD29D368F3007AE58C /* TextToSpeech+Controls.swift */,
+			);
+			path = TextToSpeech;
+			sourceTree = "<group>";
+		};
+		7834D30029D36A6D007AE58C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7834D30129D36A79007AE58C /* Flashcards.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7834D30329D36AAC007AE58C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7834D30429D36AC1007AE58C /* Store.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7834D30629D37670007AE58C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7834D30729D3768A007AE58C /* Color+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783D683D29D33F2D003A2EDC /* TextToSpeechService.swift in Sources */,
+				783D683D29D33F2D003A2EDC /* TextToSpeech.swift in Sources */,
 				782D78CA29D3314000F754CE /* ContentView.swift in Sources */,
+				7834D2F829D34291007AE58C /* TextToSpeech+SpeechDelegate.swift in Sources */,
 				782D78C829D3314000F754CE /* FlashcardZenApp.swift in Sources */,
+				7834D2FE29D368F3007AE58C /* TextToSpeech+Controls.swift in Sources */,
+				7834D30829D3768A007AE58C /* Color+Extension.swift in Sources */,
+				7834D2FC29D364D6007AE58C /* Player.swift in Sources */,
+				7834D30529D36AC1007AE58C /* Store.swift in Sources */,
+				7834D30229D36A79007AE58C /* Flashcards.swift in Sources */,
+				7834D2FA29D35990007AE58C /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
